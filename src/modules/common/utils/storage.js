@@ -2,7 +2,7 @@
 var _ = require('./base');
 
 module.exports = _.extend({
-    getItem(name) {
+    getItem: function(name) {
         var str = localStorage.getItem(name) || 'null';
         try {
             return JSON.parse(str) || null;
@@ -11,12 +11,12 @@ module.exports = _.extend({
             return null;
         }
     },
-    setItem(name, value) {
+    setItem: function(name, value) {
         try {
             localStorage.setItem(name, JSON.stringify(value));
         } catch (ex) {}
     },
-    removeItem(name) {
+    removeItem: function(name) {
         try {
             localStorage.removeItem(name);
         } catch (ex) {}

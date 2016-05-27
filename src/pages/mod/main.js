@@ -7,8 +7,8 @@ module.exports = {
         var btn = document.getElementById('btn');
 
         this.addEvent(btn, function () {
-            // self.testRequire();
-            // self.testRequireAsync();
+            self.testRequire();
+            self.testRequireAsync();
             self.testLoadJs();
             self.testLoadCss();
         });
@@ -43,8 +43,8 @@ module.exports = {
         // });
     },
     testLoadJs: function () {
-        // 异步加载脚本文件，不做任何回调
-        require.loadJs('//mat1.gtimg.com/www/asset/lib/jquery/jquery/jquery-1.11.1.min.js');
+        // 异步加载脚本文件，不做任何回调，但它们返回的顺序又不确定
+        require.loadJs('//cdn.bootcss.com/jquery/1.12.4/jquery.min.js');
         require.loadJs('//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js');
     },
     testLoadCss: function () {

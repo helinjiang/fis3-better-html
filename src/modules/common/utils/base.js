@@ -1,7 +1,4 @@
-/**
- * ! 请勿写入业务代码
- * 和项目相关业务代码写在proj.js等中
- */
+
 var _ = module.exports = {
     /**
      * 获取查询参数
@@ -32,18 +29,7 @@ var _ = module.exports = {
     uin: function() {
         var u = this.getCookie('uin');
         return u && parseInt(u.substring(1, u.length), 10) || null;
-    },
-
-    /**
-     * 代码版本 为文件打包压缩之后的md5版本号
-     * @type {String}
-     */
-    codeVersion: (function() {
-        var err = window.Error && new Error();
-        return (err && err.stack && err.stack.toString() || '')
-            .match(/[_\-](\w{6,8})\.js\b/)
-                && RegExp.$1 || '';
-    })(),
+    }, 
 
     extend: function() {
         return arguments.length === 1
