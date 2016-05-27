@@ -8,8 +8,9 @@ module.exports = {
 
         this.addEvent(btn, function () {
             // self.testRequire();
-            self.testRequireAsync();
+            // self.testRequireAsync();
             self.testLoadJs();
+            self.testLoadCss();
         });
     },
     testRequire: function () {
@@ -43,7 +44,12 @@ module.exports = {
     },
     testLoadJs: function () {
         // 异步加载脚本文件，不做任何回调
-        require.loadJs('http://mat1.gtimg.com/www/asset/lib/jquery/jquery/jquery-1.11.1.min.js');
+        require.loadJs('//mat1.gtimg.com/www/asset/lib/jquery/jquery/jquery-1.11.1.min.js');
+        require.loadJs('//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js');
+    },
+    testLoadCss: function () {
+        // 异步加载脚本文件，不做任何回调
+        require.loadCss({url: '//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css'});
     },
     addEvent: function (dom, handler) {
         if (!dom) {
