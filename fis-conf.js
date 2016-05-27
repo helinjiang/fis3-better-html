@@ -37,7 +37,16 @@ fis.match('/components/**/*.js', {
     release: '/static/$0'
 });
 
-//page里的页面发布到根目录
+/**
+ * pages 和 modules 下的 js 使用 define 包裹
+ */
+fis.match('/{pages,modules}/(**).js', {
+    isMod: true
+});
+
+/**
+ * 将page里面的页面，重命名并发布到web根目录中
+ */
 fis.match("/pages/(*)/*(.html)", {
     release: '/$1$2',
     useCache: false
