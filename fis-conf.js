@@ -32,7 +32,7 @@ fis.match('/components/**/*.js', {
 });
 
 /**
- * pages 和 modules 下的 js 使用 define 包裹
+ * pages 和 modules 下的 js 进行组件化处理
  */
 fis.match('/{pages,modules}/(**).js', {
     isMod: true

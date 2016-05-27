@@ -1,6 +1,5 @@
 # fis3-better-html
-基于fi3构建的静态网页最佳实践
-
+基于fi3构建，模块化开发简易纯静态站点的一种解决方案。
 
 ## 目录结构
 
@@ -20,9 +19,9 @@ modules 和 components 的区别在于：
 
 
 
-一套优秀的构建实践
 
+## 使用
 fis3 release
 启动内置服务器进行预览；
 
-fis3 server start --type node
+fis3 server start
