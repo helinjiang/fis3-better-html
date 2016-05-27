@@ -2,13 +2,7 @@
 //   useHash: false
 // });
 //
-//
-// fis.match('::packager', {
-//   postpackager: fis.plugin('loader', {
-//     allInOne: true
-//   })
-// });
-//
+
 // // fis-parser-less 插件进行解析
 // fis.match('*.less', {
 //   parser: fis.plugin('less'),
@@ -57,7 +51,8 @@ fis.match('::package', {
     // 分析 __RESOURCE_MAP__ 结构，来解决资源加载问题
     postpackager: fis.plugin('loader', {
         resourceType: 'commonJs',
-        useInlineMap: true // 资源映射表内嵌
+        useInlineMap: true, // 资源映射表内嵌
+        // allInOne: true, // 指定了这个参数之后，会按照page自动打包，不用专门指定 packTo
     })
 });
 
